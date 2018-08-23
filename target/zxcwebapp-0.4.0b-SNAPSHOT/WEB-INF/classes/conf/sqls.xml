@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<sqls xmlns="http://www.leapframework.org/schema/sqls">
+	<command key="user-post-list">
+		SELECT 
+		  u.*,
+		  p.`name` pname,
+		  p.`descript` 
+		FROM
+		  leap_user u 
+		  JOIN leap_user_post up 
+		    ON up.`user_id` = u.id 
+		  JOIN leap_post p 
+		    ON up.`post_id` = p.`id`
+	</command>
+</sqls>

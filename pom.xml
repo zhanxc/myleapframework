@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>war</packaging>
+
+    <groupId>com.zhanxc</groupId>
+    <artifactId>zxcwebapp</artifactId>
+    <version>0.4.0b-SNAPSHOT</version>
+
+    <repositories>
+        <!-- leap快照资源库 -->
+        <repository> <id>leap-snapshots</id>
+            <url>https://raw.githubusercontent.com/leapframework/repo/master/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>leap-releases</id>
+            <url>https://raw.githubusercontent.com/leapframework/repo/master/releases</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.leapframework</groupId>
+            <artifactId>leap</artifactId>
+            <version>0.6.9b</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+            <type>jar</type>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.7.5</version>
+            <type>jar</type>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.0.13</version>
+            <type>jar</type>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+        </dependency>
+        <dependency>
+    		<groupId>org.leapframework</groupId>
+    		<artifactId>leap-webapi</artifactId>
+    		<version>0.4.0b</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.thetransactioncompany/cors-filter -->
+		<dependency>
+    		<groupId>com.thetransactioncompany</groupId>
+    		<artifactId>cors-filter</artifactId>
+    		<version>1.7.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.thetransactioncompany/java-property-utils -->
+		<dependency>
+    		<groupId>com.thetransactioncompany</groupId>
+    		<artifactId>java-property-utils</artifactId>
+    		<version>1.13</version>
+		</dependency>
+    </dependencies>
+    
+    <build>
+    <defaultGoal>compile</defaultGoal>
+        <plugins>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+        </plugins>       
+    </build>
+    
+
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<config xmlns="http://www.leapframework.org/schema/config" xmlns:orm="http://www.leapframework.org/schema/orm/config">
+    <base-package>zxcwebapp</base-package>
+    <properties>
+        <property name="jdbcDriver">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/leap?serverTimezone=UTC</property>
+        <property name="jdbcUsername">root</property>
+        <property name="jdbcPassword">root</property>
+        <property name="orm.autoGeneateModelFields">false</property>
+    </properties>
+</config>

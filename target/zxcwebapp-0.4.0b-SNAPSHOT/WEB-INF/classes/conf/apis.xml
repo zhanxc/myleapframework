@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<apis xmlns="http://www.leapframework.org/schema/web/apis/apis">
+<api name="demo-api" base-path="/api">
+</api>
+</apis>
